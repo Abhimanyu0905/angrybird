@@ -1,0 +1,17 @@
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+eclipse.project.name = appName + '-core'
+
+dependencies {
+  // Core LibGDX
+  api "com.badlogicgames.gdx:gdx:$gdxVersion"
+
+  // Box2D Physics
+  api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+
+  // If you're using desktop platform, add this as well
+  api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+
+  if(enableGraalNative == 'true') {
+    implementation "io.github.berstanio:gdx-svmhelper-annotations:$graalHelperVersion"
+  }
+}
