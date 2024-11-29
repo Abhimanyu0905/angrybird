@@ -1,33 +1,51 @@
-# angrybird
+Angry Birds Clone - CSE 201 Project
+Overview
+This project is an implementation of the popular Angry Birds game using Java and LibGDX. The game allows players to launch birds from a slingshot to destroy pigs and various structures made from blocks. The goal is to complete each level by destroying all the pigs using a limited number of birds.
 
-A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
+Key Features:
+Different types of birds with unique abilities (Red Bird, Yellow Bird, Black Bird).
+Physics-based gameplay using Box2D for accurate collision and movement.
+Various materials like wood, glass, and stone with different durability.
+A slingshot with drag-to-launch mechanics for controlling the bird's trajectory.
+Levels with progressively harder obstacles and pigs.
+Score tracking and level transitions.
 
-This project was generated with a template including simple application launchers and an `ApplicationAdapter` extension that draws libGDX logo.
+Usage
+Gameplay:
+The game consists of different levels where you must launch birds at pigs and various blocks to destroy them.
+You have a limited number of birds in each level.
+The bird is placed at the head of the slingshot. You can drag the bird backward to aim and release it to launch.
+Birds have different powers (e.g., the Red Bird has standard power, the Yellow Bird accelerates, and the Black Bird explodes).
+Each level must be completed by destroying all pigs within the bird limit.
 
-## Platforms
+Controls:
+Drag: Click and hold to drag the bird backward in the slingshot.
+Release: Let go to launch the bird.
 
-- `core`: Main module with the application logic shared by all platforms.
-- `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
+Game Mechanics
+Slingshot:
+The slingshot acts as a catapult that launches birds towards the targets (pigs and blocks).
+The bird's launch velocity is determined by how far it is pulled back in the slingshot.
+The birds are placed at the head of the slingshot before each launch.
+Birds:
+Red Bird: Standard bird with average power.
+Yellow Bird: Speedy bird with a special power to increase speed upon activation.
+Black Bird: Explosive bird that causes an area of effect damage when it hits the target.
+Blocks:
+Different types of blocks with varying durability:
+Wood Block: Breaks easily.
+Glass Block: Breaks with higher damage.
+Stone Block: Very tough to break.
+Pigs:
+Pigs are placed on the blocks and must be destroyed to complete the level.
+Larger pigs have more health and require more damage to be destroyed.
 
-## Gradle
+Game Screens:
+Main Menu Screen: The main menu with options to start the game, view settings, or exit.
 
-This project uses [Gradle](https://gradle.org/) to manage dependencies.
-The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
-Useful Gradle tasks and flags:
+Level Selection Screen: A screen to choose different levels to play.
 
-- `--continue`: when using this flag, errors will not stop the tasks from running.
-- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
-- `--offline`: when using this flag, cached dependency archives will be used.
-- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
-- `build`: builds sources and archives of every project.
-- `cleanEclipse`: removes Eclipse project data.
-- `cleanIdea`: removes IntelliJ project data.
-- `clean`: removes `build` folders, which store compiled classes and built archives.
-- `eclipse`: generates Eclipse project data.
-- `idea`: generates IntelliJ project data.
-- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
-- `lwjgl3:run`: starts the application.
-- `test`: runs unit tests (if any).
+Gameplay Screen: The main gameplay screen where you launch birds at structures and pigs.
 
-Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
-For example, `core:clean` removes `build` folder only from the `core` project.
+Pause Screen: A screen to pause the game, restart the level, or return to the main menu.
+
